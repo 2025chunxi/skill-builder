@@ -1,0 +1,7 @@
+interface:
+  display_name: "Project To Skill"
+  short_description: "Convert projects into Codex Skills"
+  default_prompt: "Use $project-to-skill to decide whether this project should become a Skill and package it if suitable."
+
+policy:
+  allow_implicit_invocation: true

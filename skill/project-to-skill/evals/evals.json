@@ -1,0 +1,38 @@
+{
+  "skill": "project-to-skill",
+  "needs_human_review": false,
+  "cases": [
+    {
+      "id": "happy-01",
+      "kind": "happy",
+      "prompt": "Turn this local Python CLI project into an installable Codex Skill with tested scripts and a packaged .skill file.",
+      "trigger_expected": true,
+      "pass_criteria": [
+        "Uses the Skill's documented workflow and bundled resources",
+        "Produces a verifiable result or clearly identifies the blocker"
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "edge-01",
+      "kind": "edge",
+      "prompt": "Evaluate whether this internal workflow can become a Skill even though installation details and one private dependency are missing.",
+      "trigger_expected": true,
+      "pass_criteria": [
+        "Uses the Skill's documented workflow and bundled resources",
+        "Produces a verifiable result or clearly identifies the blocker"
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "negative-01",
+      "kind": "mis-trigger",
+      "prompt": "Explain what a Python virtual environment is without creating or invoking a Skill.",
+      "trigger_expected": false,
+      "pass_criteria": [
+        "Does not invoke or rely on this Skill for an unrelated nearby request"
+      ],
+      "status": "not-run"
+    }
+  ]
+}
