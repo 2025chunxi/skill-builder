@@ -1,14 +1,14 @@
 ---
-name: project-to-skill
+name: skill-builder
 description: >
-  Convert a project, tool, API, workflow, SOP, documentation set, or library into
-  an installable Codex Skill. Use when the user asks to create, update, package,
+  Build an installable Codex Skill from a project, tool, API, workflow, SOP,
+  documentation set, or library. Use when the user asks to create, update, package,
   scaffold, or evaluate a Skill from a GitHub repo, package, CLI, REST or GraphQL
   API, MCP server, internal process, template, methodology, or existing docs.
   Also use when deciding whether something is worth turning into a Skill.
 ---
 
-# Project To Skill
+# Skill Builder
 
 Turn reusable procedural knowledge into a small, installable Skill. Optimize for
 modern Codex: assume the model is capable, keep instructions lean, and bundle
@@ -202,9 +202,9 @@ Override generated values when the default wording is too generic:
 
 ```bash
 python scripts/generate_openai_yaml.py path/to/skill \
-  --display-name "GitHub Credibility Check" \
+  --display-name "Repo Trust" \
   --short-description "Audit GitHub repo trust signals" \
-  --default-prompt "Use $github-credibility-check to evaluate whether this GitHub repository is trustworthy."
+  --default-prompt "Use $repo-trust to evaluate whether this GitHub repository is trustworthy."
 ```
 
 The default prompt must mention `$skill-name`.

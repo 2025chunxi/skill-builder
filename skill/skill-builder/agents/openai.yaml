@@ -1,0 +1,7 @@
+interface:
+  display_name: "Skill Builder"
+  short_description: "Build installable Skills from projects"
+  default_prompt: "Use $skill-builder to decide whether this project should become a Skill and package it if suitable."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,21 +1,21 @@
-<h1 align="center">project-to-skill</h1>
+<h1 align="center">skill-builder</h1>
 
-<p align="center"><strong>把真实项目，变成可安装、可验证、可复用的 Codex Skill。</strong></p>
+<p align="center"><strong>把项目变成可安装的 Codex Skill。</strong></p>
 
 <p align="center">
-  不是把 README 改写成提示词，而是把来源研究、价值判断、证据提取、严格校验和安全打包连成一条可复现的工程流程。
+  自动分析项目、提取真实用法、生成、验证并打包 Skill。
 </p>
 
 <p align="center">
   <strong>简体中文</strong> · <a href="README.en.md">English</a> ·
-  <a href="https://github.com/2025chunxi/project-to-skill/releases/tag/v0.1.0-beta">下载 v0.1.0-beta</a> ·
-  <a href="https://github.com/2025chunxi/project-to-skill/issues">反馈问题</a>
+  <a href="https://github.com/2025chunxi/skill-builder/releases/tag/v0.2.0-beta">下载 v0.2.0-beta</a> ·
+  <a href="https://github.com/2025chunxi/skill-builder/issues">反馈问题</a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/2025chunxi/project-to-skill/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/2025chunxi/project-to-skill/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/2025chunxi/project-to-skill/releases/tag/v0.1.0-beta"><img alt="Release" src="https://img.shields.io/github/v/release/2025chunxi/project-to-skill?include_prereleases&style=flat-square"></a>
-  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/2025chunxi/project-to-skill?style=flat-square"></a>
+  <a href="https://github.com/2025chunxi/skill-builder/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/2025chunxi/skill-builder/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/2025chunxi/skill-builder/releases/tag/v0.2.0-beta"><img alt="Release" src="https://img.shields.io/github/v/release/2025chunxi/skill-builder?include_prereleases&style=flat-square"></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/2025chunxi/skill-builder?style=flat-square"></a>
   <img alt="Python 3.11+" src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white">
 </p>
 
@@ -29,7 +29,7 @@
 - 把本机绝对路径、疑似凭据或未验证示例带进发布包。
 - 文件看起来齐全，却没有严格校验、回归测试和可安装的 `.skill`。
 
-`project-to-skill` 把这些环节变成确定性流程，并且允许在低价值时直接得出“不建议转换”。
+`skill-builder` 把这些环节变成确定性流程，并且允许在低价值时直接得出“不建议转换”。
 
 ```mermaid
 flowchart LR
@@ -88,19 +88,19 @@ skill-src/
 
 ```text
 使用 $skill-installer 安装：
-https://github.com/2025chunxi/project-to-skill/tree/main/skill/project-to-skill
+https://github.com/2025chunxi/skill-builder/tree/main/skill/skill-builder
 ```
 
 新建任务后即可这样使用：
 
 ```text
-使用 $project-to-skill 评估并转换 path/to/project。
+使用 $skill-builder 评估并转换 path/to/project。
 先判断它是否值得做成 Skill，再生成、验证并打包结果。
 ```
 
 ### 方式二：下载发布包
 
-下载 [`project-to-skill.skill`](https://github.com/2025chunxi/project-to-skill/releases/download/v0.1.0-beta/project-to-skill.skill)，将归档中的 `project-to-skill` 顶层目录解压到 `$CODEX_HOME/skills`（默认 `~/.codex/skills`），然后新建 Codex 任务以加载 Skill。
+下载 [`skill-builder.skill`](https://github.com/2025chunxi/skill-builder/releases/download/v0.2.0-beta/skill-builder.skill)，将归档中的 `skill-builder` 顶层目录解压到 `$CODEX_HOME/skills`（默认 `~/.codex/skills`），然后新建 Codex 任务以加载 Skill。
 
 ## 适合与不适合
 
@@ -120,7 +120,7 @@ python -m pip install -r requirements.txt
 python scripts/build_release.py
 ```
 
-输出为 `dist/project-to-skill.skill`。构建会执行 README 提取测试、安全回归测试、严格 Skill 校验、归档完整性检查，以及仓库级密钥、PII、本机路径和归档安全扫描。
+输出为 `dist/skill-builder.skill`。构建会执行 README 提取测试、安全回归测试、严格 Skill 校验、归档完整性检查，以及仓库级密钥、PII、本机路径和归档安全扫描。
 
 ## 隐私与证据边界
 
@@ -132,9 +132,9 @@ python scripts/build_release.py
 
 ## 项目状态
 
-当前版本为 `v0.1.0-beta`。确定性检查、校验和打包流程已有自动化测试；自然语言触发效果仍会随 Codex 版本和项目类型继续验证。
+当前版本为 `v0.2.0-beta`。本版本启用新的 Skill 名称 `skill-builder`；确定性检查、校验和打包流程已有自动化测试。
 
-欢迎提交 [Issue](https://github.com/2025chunxi/project-to-skill/issues) 或阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 参与改进。
+欢迎提交 [Issue](https://github.com/2025chunxi/skill-builder/issues) 或阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 参与改进。
 
 ## 许可证
 
